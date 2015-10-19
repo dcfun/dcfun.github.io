@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="Tblog">
 <meta property="og:description" content="20151015 终于下定决心 给自己搭个博客  参考资料：   简书 - 《如何搭建一个独立博客——简明Github Pages与Hexo教程》 和 资源部落 - 《Hexo免费静态博客安装和使用方法-基于Node.js高效率静态博客程序》  
 &quot;&amp;gt;">
-<meta property="og:image" content="http://dcfun.github.com/pic/151017212726.png">
-<meta property="og:image" content="http://chunchao.org/pic/151018120234.png">
-<meta property="og:updated_time" content="2015-10-19T04:27:55.928Z">
+<meta property="og:image" content="http://i.imgur.com/c6TDn8E.png">
+<meta property="og:image" content="http://i.imgur.com/nXFt8hv.png">
+<meta property="og:updated_time" content="2015-10-19T04:59:54.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="20151015 终于下定决心 给自己搭个博客  参考资料：   简书 - 《如何搭建一个独立博客——简明Github Pages与Hexo教程》 和 资源部落 - 《Hexo免费静态博客安装和使用方法-基于Node.js高效率静态博客程序》  
@@ -124,7 +124,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/学习笔记/" style="font-size: 20px;">学习笔记</a> <a href="/tags/经典软件/" style="font-size: 10px;">经典软件</a> <a href="/tags/随便聊聊/" style="font-size: 10px;">随便聊聊</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/学习笔记/" style="font-size: 20px;">学习笔记</a> <a href="/tags/瞎推荐/" style="font-size: 10px;">瞎推荐</a> <a href="/tags/经典软件/" style="font-size: 10px;">经典软件</a> <a href="/tags/随便聊聊/" style="font-size: 10px;">随便聊聊</a>
 					</div>
 				</section>
 				
@@ -251,18 +251,17 @@
 <p>  我的这个博客的主题叫：<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a>  </p>
 <p>  下面我就以自己为例，开始部署我的博客了。  </p>
 <ol>
-<li><p>我是在我的GoogleDrive文件夹中建立了一个叫<strong>hexo</strong>的文件夹</p>
-<div align="center"><img src="/pic/151017212726.png" width="632px" height="221px" alt="151017212726"></div>  
+<li>我是在我的GoogleDrive文件夹中建立了一个叫<strong>hexo</strong>的文件夹<div align="center"><img src="http://i.imgur.com/c6TDn8E.png" width="632px" height="221px" alt="151017212726"></div>  
 
+</li>
+</ol>
 <p>2.进入hexo文件夹 右键-&gt;Git Bash  依次执行：   </p>
 <blockquote>
 <p>$npm install #安装Hexo  </p>
 <p>$hexo init  #部署Hexo  </p>
-<p>$git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia  #克隆主题模板到themes/yilia目录下    </p>
+<p>$git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia  #克隆主题模板到themes/yilia目录下      </p>
 </blockquote>
 <p>3.<strong>启用主题</strong> 并进行<strong>Hexo的相关配置</strong><br>即 将_config.yml的<strong>theme</strong>属性改为：yilia。<br>hexo的配置文件参考文档：<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a><br>下面贴一下我的/hexo/<a href="https://github.com/dcfun/BlogBackups/blob/master/_config.yml" target="_blank" rel="external">_config.yml</a>文件</p>
-</li>
-</ol>
 <p>再装个RSS插件：</p>
 <blockquote>
 <p>$npm install hexo-generator-feed –save</p>
@@ -275,7 +274,7 @@
 <p>  $hexo d -g #生成静态页面至public目录 并部署到github上  </p>
 </blockquote>
 <p>###怎么发表文章呢？<br>(以此文为例)我的做法是：<br>在/hexo/source/_posts中 新建一个“Hello World.md”的文件。(我用<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad</a>这款软件写博文)<br>然后 双击打开 第一件事：填写title、date、categories、tags</p>
-<div align="center"><img src="http://chunchao.org/pic/151018120234.png" width="342px" height="200px" alt="151018120234"></div>
+<div align="center"><img src="http://i.imgur.com/nXFt8hv.png" width="342px" height="200px" alt="151018120234"></div>
 
 <p>第二件事：…………正文…………<br>至于markdown语法小技巧，请移步：<a href="http://dcfun.github.io/2015/10/18/小工具-Markdown使用笔记/" target="_blank" rel="external">Markdown使用笔记</a></p>
 

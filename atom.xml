@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dcfun.github.com/"/>
-  <updated>2015-10-18T09:35:54.561Z</updated>
+  <updated>2015-10-19T02:35:54.499Z</updated>
   <id>http://dcfun.github.com/</id>
   
   <author>
@@ -16,13 +16,15 @@
   
   <entry>
     <title><![CDATA[Git学习笔记]]></title>
-    <link href="http://dcfun.github.com/2015/10/18/%E5%B0%8F%E5%B7%A5%E5%85%B7%20-%20Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://dcfun.github.com/2015/10/18/小工具 - Git学习笔记/</id>
+    <link href="http://dcfun.github.com/2015/10/18/%E5%B0%8F%E5%B7%A5%E5%85%B7-Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://dcfun.github.com/2015/10/18/小工具-Git学习笔记/</id>
     <published>2015-10-18T09:34:59.000Z</published>
-    <updated>2015-10-18T09:35:54.561Z</updated>
-    <content type="html"></content>
+    <updated>2015-10-19T02:35:54.499Z</updated>
+    <content type="html"><![CDATA[<p>参考资料：<a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git-简明指南</a> <a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解Git</a>  </p>
+<p>从小米的一道面试题学起：  </p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p>参考资料：<a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git-简明指南</a> <a href="http://marklodat]]>
     </summary>
     
       <category term="git" scheme="http://dcfun.github.com/tags/git/"/>
@@ -35,20 +37,20 @@
   
   <entry>
     <title><![CDATA[Markdown使用笔记]]></title>
-    <link href="http://dcfun.github.com/2015/10/18/%E5%B0%8F%E5%B7%A5%E5%85%B7%20-%20Markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>http://dcfun.github.com/2015/10/18/小工具 - Markdown使用笔记/</id>
+    <link href="http://dcfun.github.com/2015/10/18/%E5%B0%8F%E5%B7%A5%E5%85%B7-Markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://dcfun.github.com/2015/10/18/小工具-Markdown使用笔记/</id>
     <published>2015-10-18T06:31:08.000Z</published>
-    <updated>2015-10-18T08:47:38.008Z</updated>
-    <content type="html"><![CDATA[<p>#添加图片，使其居中<br>（我用的是html标签） </p>
+    <updated>2015-10-19T01:54:07.208Z</updated>
+    <content type="html"><![CDATA[<p>#添加图片，使其居中<br>（我是直接用的html标签） </p>
 <pre><code>&lt;<span class="tag">div</span> align=center&gt;
     &lt;<span class="tag">img</span> src=<span class="string">"图片url"</span> <span class="attribute">width</span>=<span class="string">"宽度px"</span> <span class="attribute">height</span>=<span class="string">"高度px"</span> alt=<span class="string">"151017212726"</span>/&gt;
 &lt;/div&gt; 
 </code></pre><a id="more"></a>
 <p>#给博文添加个 read more功能<br>在你想停的地方 加个/&lt;!–more–/&gt;<br>(/为转义字符，请自动忽略)  </p>
-<p>#在markdown里插入代码 真蛋疼<br>短一点的代码 我准备直接截图，然后直接插入图片了<br>长一点的 直接传到github上，分享地址<img src="http://chunchao.org/pic/wx.png" alt=""></p>
+<p>#在markdown里插入代码 真心蛋疼<br>短一点的代码 我准备直接截图，然后直接插入图片了<br>长一点的 直接传到github上，分享地址<img src="http://chunchao.org/pic/wx.png" alt=""></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>#添加图片，使其居中<br>（我用的是html标签） </p>
+    <![CDATA[<p>#添加图片，使其居中<br>（我是直接用的html标签） </p>
 <pre><code>&lt;<span class="tag">div</span> align=center&gt;
     &lt;<span class="tag">img</span> src=<span class="string">"图片url"</span> <span class="attribute">width</span>=<span class="string">"宽度px"</span> <span class="attribute">height</span>=<span class="string">"高度px"</span> alt=<span class="string">"151017212726"</span>/&gt;
 &lt;/div&gt; 
@@ -66,10 +68,10 @@
   
   <entry>
     <title><![CDATA[一些好用的 经典软件]]></title>
-    <link href="http://dcfun.github.com/2015/10/18/%E7%9E%8E%E6%8E%A8%E8%8D%90%20-%20%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%20%E7%BB%8F%E5%85%B8%E8%BD%AF%E4%BB%B6/"/>
-    <id>http://dcfun.github.com/2015/10/18/瞎推荐 - 一些好用的 经典软件/</id>
+    <link href="http://dcfun.github.com/2015/10/18/%E7%9E%8E%E6%8E%A8%E8%8D%90-%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%20%E7%BB%8F%E5%85%B8%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://dcfun.github.com/2015/10/18/瞎推荐-一些好用的 经典软件/</id>
     <published>2015-10-18T05:55:42.000Z</published>
-    <updated>2015-10-18T15:20:51.180Z</updated>
+    <updated>2015-10-19T01:53:30.034Z</updated>
     <content type="html"><![CDATA[<p>#<a href="http://ad-safe.com/" target="_blank" rel="external">ADSafe-净网大师</a><br>看视频 在也不用等广告了 哈哈哈</p>
 <p>#<a href="https://www.piriform.com/ccleaner" target="_blank" rel="external">CCleaner</a><br>电脑垃圾清理神器，直接下载免费版的 就够用 放心</p>
 <a id="more"></a>
@@ -86,8 +88,6 @@
     
     </summary>
     
-      <category term="WindowsPC" scheme="http://dcfun.github.com/tags/WindowsPC/"/>
-    
       <category term="经典软件" scheme="http://dcfun.github.com/tags/%E7%BB%8F%E5%85%B8%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="recommend" scheme="http://dcfun.github.com/categories/recommend/"/>
@@ -96,10 +96,10 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://dcfun.github.com/2015/10/17/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A%20-%20Hello%20World/"/>
-    <id>http://dcfun.github.com/2015/10/17/随便聊聊 - Hello World/</id>
+    <link href="http://dcfun.github.com/2015/10/17/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A-Hello%20World/"/>
+    <id>http://dcfun.github.com/2015/10/17/随便聊聊-Hello World/</id>
     <published>2015-10-16T19:23:21.000Z</published>
-    <updated>2015-10-18T15:08:36.468Z</updated>
+    <updated>2015-10-19T04:27:55.928Z</updated>
     <content type="html"><![CDATA[<p>  20151015 终于下定决心 给自己搭个博客<br>  参考资料：   <a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">简书 - 《如何搭建一个独立博客——简明Github Pages与Hexo教程》</a> 和 <a href="http://www.freehao123.com/hexo-node-js/" target="_blank" rel="external">资源部落 - 《Hexo免费静态博客安装和使用方法-基于Node.js高效率静态博客程序》</a>  </p>
 <h2 id="<!-more->"><a id="more"></a></h2><p> ……（此处省略 <em>参考资料</em> 中搭建Node、git环境部分）</p>
 <p>  环境搭建好了，下面 就到 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官方主题页</a> 或者 <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">github官方整理的主题列表</a>中 选一个你喜欢的主题吧。。  </p>
@@ -107,16 +107,15 @@
 <p>  下面我就以自己为例，开始部署我的博客了。  </p>
 <ol>
 <li><p>我是在我的GoogleDrive文件夹中建立了一个叫<strong>hexo</strong>的文件夹</p>
-<div align="center"><img src="http://chunchao.org/pic/151017212726.png" width="555px" height="222px" alt="151017212726"></div>  
+<div align="center"><img src="/pic/151017212726.png" width="632px" height="221px" alt="151017212726"></div>  
 
 <p>2.进入hexo文件夹 右键-&gt;Git Bash  依次执行：   </p>
 <blockquote>
-<p>$npm install #安装Hexo<br>$hexo init  #部署Hexo<br>$git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia  #克隆主题模板到themes/yilia目录下    </p>
+<p>$npm install #安装Hexo  </p>
+<p>$hexo init  #部署Hexo  </p>
+<p>$git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia  #克隆主题模板到themes/yilia目录下    </p>
 </blockquote>
-<p>3.<strong>启用主题</strong> 并进行<strong>Hexo的相关配置</strong><br>我的/hexo/_config.yml如下：(参考文档：<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a>)  </p>
-<div align="left"><img src="http://chunchao.org/pic/hexo_config.yml.png" width="523px" height="1278px" alt="/hexo/_config.yml"></div>  
-
-
+<p>3.<strong>启用主题</strong> 并进行<strong>Hexo的相关配置</strong><br>即 将_config.yml的<strong>theme</strong>属性改为：yilia。<br>hexo的配置文件参考文档：<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a><br>下面贴一下我的/hexo/<a href="https://github.com/dcfun/BlogBackups/blob/master/_config.yml" target="_blank" rel="external">_config.yml</a>文件</p>
 </li>
 </ol>
 <p>再装个RSS插件：</p>
@@ -133,7 +132,7 @@
 <p>###怎么发表文章呢？<br>(以此文为例)我的做法是：<br>在/hexo/source/_posts中 新建一个“Hello World.md”的文件。(我用<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad</a>这款软件写博文)<br>然后 双击打开 第一件事：填写title、date、categories、tags</p>
 <div align="center"><img src="http://chunchao.org/pic/151018120234.png" width="342px" height="200px" alt="151018120234"></div>
 
-<p>第二件事：…………正文…………<br>至于markdown语法小技巧，请移步：<a href="http://dcfun.github.io/2015/10/18/Markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank" rel="external">Markdown使用笔记</a></p>
+<p>第二件事：…………正文…………<br>至于markdown语法小技巧，请移步：<a href="http://dcfun.github.io/2015/10/18/小工具-Markdown使用笔记/" target="_blank" rel="external">Markdown使用笔记</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>  20151015 终于下定决心 给自己搭个博客<br>  参考资料：   <a href="http://www.jianshu.com/p/05289a4bc8b2">简书 - 《如何搭建一个独立博客——简明Github Pages与Hexo教程》</a> 和 <a href="http://www.freehao123.com/hexo-node-js/">资源部落 - 《Hexo免费静态博客安装和使用方法-基于Node.js高效率静态博客程序》</a>  </p>

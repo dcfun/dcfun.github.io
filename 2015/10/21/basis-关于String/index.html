@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: recommend | Tblog</title>
+  <title>关于String[only for 面试] | Tblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tblog">
-<meta property="og:url" content="http://dcfun.github.com/categories/recommend/index.html">
+  <meta name="description" content="new String()和new String(“”)都是申明一个新的空字符串，是空串 不是null；String s = new String(“abc”);如果常量池已经有”abc”就是创建一个对象，如果没有就是创建两个对象。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于String[only for 面试]">
+<meta property="og:url" content="http://dcfun.github.com/2015/10/21/basis-关于String/index.html">
 <meta property="og:site_name" content="Tblog">
-<meta property="og:description">
+<meta property="og:description" content="new String()和new String(“”)都是申明一个新的空字符串，是空串 不是null；String s = new String(“abc”);如果常量池已经有”abc”就是创建一个对象，如果没有就是创建两个对象。">
+<meta property="og:updated_time" content="2015-10-21T02:37:49.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tblog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="关于String[only for 面试]">
+<meta name="twitter:description" content="new String()和new String(“”)都是申明一个新的空字符串，是空串 不是null；String s = new String(“abc”);如果常量池已经有”abc”就是创建一个对象，如果没有就是创建两个对象。">
   
     <link rel="alternative" href="/atom.xml" title="Tblog" type="application/atom+xml">
   
@@ -198,127 +199,126 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-basis-关于String" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2015/10/21/basis-关于String/" class="article-date">
+  	<time datetime="2015-10-21T02:25:59.000Z" itemprop="datePublished">2015-10-21</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于String[only for 面试]
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/basis/">basis</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/21/瞎推荐-秒拍收藏/" class="archive-article-date">
-  	<time datetime="2015-10-20T16:14:31.000Z" itemprop="datePublished">10月 21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/21/瞎推荐-秒拍收藏/">秒拍收藏</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>new String()和new String(“”)都是申明一个新的空字符串，是空串 不是null；<br>String s = new String(“abc”);如果常量池已经有”abc”就是创建一个对象，如果没有就是创建两个对象。<br><a id="more"></a><br>String是不可变的<br>StringBuffer和StringBuilder是可变的<br>StringBuffer线程安全,<br>StringBuilder线程不安全  </p>
+<p>String的实例一旦生成就不会再改变了，比如说：String str=”kv”+”ill”+”“+”ans”;<br>就是有4个字符串常量，首先”kv”和”ill”生成了”kvill”存在内存中，然后”kvill”又和” “ 生成 ”kvill“存在内存中，最后又和生成了”kvillans”;并把这个字符串的地址赋给了str,就是因为String的“不可变”产生了很多临时变量，这也就是为什么建议用StringBuffer的原因了，因为StringBuffer是可改变的</p>
+<p>关于equals()和==：<br>对于基本数据类型（byte,short,char,int,long,float,double,boolean）之间数值的比较，一般用 “==”<br>对于复合数据类型（String）<br>用“==”比较的是 他们在内存中的地址值</p>
+<blockquote>
+<p>String s0 = “asdf”;<br>String s1 = “asdf”;<br>//System.out.println(s0==s1);     –&gt;true<br>String s2 = new String(“asdf”);<br>//System.out.println(s0==s2);     –&gt;false<br>//System.out.println(s0.equals(s2));    –&gt;true<br>String s3 = “a” + new String(“sdf”);<br>//System.out.println(s0==s3);    –&gt;false<br>//System.out.println(s2==s3);    –&gt;false </p>
+</blockquote>
+<p>关于intern()方法：</p>
+<blockquote>
+<p>String s0 = “asdf”;<br>String s1 = new String(“asdf”);<br>s1 = s1.intern();<br>System.out.println(s0==s1);     –&gt;true</p>
+</blockquote>
+<p>没错 当调用intern()方法时：Java先检查常量池中是否存在相同的字符串常量，如果存在 返回其地址；<br>否则：</p>
+<blockquote>
+<p>System.out.println(“asdf”.intern());    –&gt;asdf  </p>
+</blockquote>
+<hr>
+<p>equals的情况比较复杂，它是java.lang.Object类中的一个方法。因为java中所有的类都默认继承于Object，所以所有的类都有这个方法。<br>在Object类源码中是这样写的。</p>
+<pre><code><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>{  
+    <span class="keyword">return</span> (<span class="keyword">this</span> == obj);  
+}  
+</code></pre><p>他同样使用==号进行内存地址的比较。但是许多java类中都重写了这个方法，比如String。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瞎推荐/">瞎推荐</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/recommend/">recommend</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/10/21/瞎推荐-秒拍收藏/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">秒拍收藏</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/19/瞎推荐-整理一下我的播放列表/" class="archive-article-date">
-  	<time datetime="2015-10-19T05:15:59.000Z" itemprop="datePublished">10月 19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/19/瞎推荐-整理一下我的播放列表/">整理一下我的播放列表</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瞎推荐/">瞎推荐</a></li></ul>
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/recommend/">recommend</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/18/瞎推荐-一些好用的 经典软件/" class="archive-article-date">
-  	<time datetime="2015-10-18T05:55:42.000Z" itemprop="datePublished">10月 18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/18/瞎推荐-一些好用的 经典软件/">一些好用的 经典软件</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/经典软件/">经典软件</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/recommend/">recommend</a>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="basis-关于String" data-title="关于String[only for 面试]" data-url="http://dcfun.github.com/2015/10/21/basis-关于String/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
 
 </div>
       <footer id="footer">
@@ -347,10 +347,10 @@
 		mathjax: true,
 		animate: undefined,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: undefined
 	}
 </script>

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dcfun.github.com/"/>
-  <updated>2015-10-22T09:56:45.872Z</updated>
+  <updated>2015-10-23T07:32:37.723Z</updated>
   <id>http://dcfun.github.com/</id>
   
   <author>
@@ -15,18 +15,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[给陈依凡写的Github简明配置教程]]></title>
+    <title><![CDATA[Sublime使用笔记]]></title>
+    <link href="http://dcfun.github.com/2015/10/23/utils-Sublime%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://dcfun.github.com/2015/10/23/utils-Sublime使用笔记/</id>
+    <published>2015-10-23T04:18:12.000Z</published>
+    <updated>2015-10-23T07:32:37.723Z</updated>
+    <content type="html"><![CDATA[<p>#将eclipse中的一些快捷键移植过来：<br>Preferences -&gt; Key Bindings - User -&gt;<br><a id="more"></a></p>
+<pre><code>[
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+/"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"auto_complete"</span></span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+d"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"run_macro_file"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">file</span>": <span class="value"><span class="string">"Packages/Default/Delete Line.sublime-macro"</span></span>} </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+shift+f"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"reindent"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+enter"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"run_macro_file"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">file</span>": <span class="value"><span class="string">"Packages/Default/Add Line.sublime-macro"</span></span>} </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+up"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"swap_line_up"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+down"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"swap_line_down"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+shift+s"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"save_all"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+ctrl+f4"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"close_all"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+ctrl+x"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"upper_case"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+ctrl+y"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"lower_case"</span> </span>},
+ { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+alt+j"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"join_lines"</span> </span>},
+     // 复制当前行到上一行
+    { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+alt+up"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"duplicate_line"</span> </span>},
+    // 复制当前行到下一行
+    { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+alt+down"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"duplicate_line"</span> </span>},
+    // 光标移动到指定行
+    { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+l"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"show_overlay"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">overlay</span>": <span class="value"><span class="string">"goto"</span></span>, "<span class="attribute">text</span>": <span class="value"><span class="string">":"</span></span>} </span>},
+    // 快速定位到选中的文字
+    { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+k"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"find_under_expand_skip"</span> </span>}
+
+]
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>#将eclipse中的一些快捷键移植过来：<br>Preferences -&gt; Key Bindings - User -&gt;<br>]]>
+    
+    </summary>
+    
+      <category term="Sublime" scheme="http://dcfun.github.com/tags/Sublime/"/>
+    
+      <category term="学习笔记" scheme="http://dcfun.github.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="utils" scheme="http://dcfun.github.com/categories/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Github简明配置教程]]></title>
     <link href="http://dcfun.github.com/2015/10/22/utils-Github-Simple-config-Guide/"/>
     <id>http://dcfun.github.com/2015/10/22/utils-Github-Simple-config-Guide/</id>
     <published>2015-10-22T04:18:06.000Z</published>
-    <updated>2015-10-22T09:56:45.872Z</updated>
+    <updated>2015-10-23T14:04:47.707Z</updated>
     <content type="html"><![CDATA[<p>#第一步：安装<strong>msysGit</strong><br>下载地址：<a href="https://github.com/msysgit/msysgit/releases/tag/Git-1.9.5-preview20150319" target="_blank" rel="external">https://github.com/msysgit/msysgit</a><br><a id="more"></a></p>
 <p>#第二步：配置本地git  </p>
 <blockquote>
 <p>$git config –global user.name “你的用户名”  </p>
 <p>$git config –global user.email “你的邮箱”  </p>
 </blockquote>
-<p>没有提示 就是最好的提示  </p>
 <p>#第三步：生成本地SSH key  </p>
 <blockquote>
 <blockquote>

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dcfun.github.com/"/>
-  <updated>2015-10-23T07:32:37.723Z</updated>
+  <updated>2015-10-23T15:23:40.367Z</updated>
   <id>http://dcfun.github.com/</id>
   
   <author>
@@ -15,11 +15,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[IntelliJ IDEA 14.1使用笔记]]></title>
+    <link href="http://dcfun.github.com/2015/10/23/utils-IntelliJ%20IDEA%2014.1%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://dcfun.github.com/2015/10/23/utils-IntelliJ IDEA 14.1使用笔记/</id>
+    <published>2015-10-23T15:23:31.000Z</published>
+    <updated>2015-10-23T15:23:40.367Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://dcfun.github.com/tags/IDEA/"/>
+    
+      <category term="学习笔记" scheme="http://dcfun.github.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="utils" scheme="http://dcfun.github.com/categories/utils/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Sublime使用笔记]]></title>
     <link href="http://dcfun.github.com/2015/10/23/utils-Sublime%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://dcfun.github.com/2015/10/23/utils-Sublime使用笔记/</id>
     <published>2015-10-23T04:18:12.000Z</published>
-    <updated>2015-10-23T07:32:37.723Z</updated>
+    <updated>2015-10-23T15:22:19.279Z</updated>
     <content type="html"><![CDATA[<p>#将eclipse中的一些快捷键移植过来：<br>Preferences -&gt; Key Bindings - User -&gt;<br><a id="more"></a></p>
 <pre><code>[
  { "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+/"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"auto_complete"</span></span>},

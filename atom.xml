@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dcfun.github.com/"/>
-  <updated>2015-10-23T15:23:40.367Z</updated>
+  <updated>2015-10-24T04:57:55.133Z</updated>
   <id>http://dcfun.github.com/</id>
   
   <author>
@@ -13,6 +13,103 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关于浮点数与IEEE754]]></title>
+    <link href="http://dcfun.github.com/2015/10/24/basis-%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E4%B8%8EIEEE754/"/>
+    <id>http://dcfun.github.com/2015/10/24/basis-关于浮点数与IEEE754/</id>
+    <published>2015-10-24T04:54:49.000Z</published>
+    <updated>2015-10-24T04:57:55.133Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="计算机组成原理" scheme="http://dcfun.github.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="basis" scheme="http://dcfun.github.com/categories/basis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[关于C语言中的位操作符]]></title>
+    <link href="http://dcfun.github.com/2015/10/24/basis-%E5%85%B3%E4%BA%8EC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
+    <id>http://dcfun.github.com/2015/10/24/basis-关于C语言中的位操作符/</id>
+    <published>2015-10-24T04:40:12.000Z</published>
+    <updated>2015-10-24T05:10:06.273Z</updated>
+    <content type="html"><![CDATA[<p>估计大多数人第一次接触C语言位操作时都不屑一顾，很多人都会说“C是高级语言，还用得着在这么低级的数位层级上进行操作吗？这东西应该属于汇编才对！”值得一提地是，除了嵌入式系统开发外，即便是在PC机编程方面位操作符也有其用武之地，有很多非常巧妙的问题都可以通过位操作来方便地实现。此外，我们还可以注意到现在通用的高级语言一般都保留了位操作符，像Java这样的语言还在C的基础上有所加强（增加了&gt;&gt;&gt;操作符，克服了右移时高位不确定的不足）。<br><a id="more"></a></p>
+<p>C语言一共提供了6种位操作符：</p>
+<p>&ensp;&amp; 按位与<br>&ensp;| 按位或<br>&ensp;^ 按位异或<br>&ensp;~ 取反<br>&ensp;&lt;&lt; 左移<br>&ensp;&gt;&gt; 右移  </p>
+<hr>
+<p>1、&amp; 按位与：<br>&amp;是二元操作符，参加运算的两个数据按二进制数位进行“与”（AND）运算。原则是全1才1，有0则0，即0&amp;0=0、0&amp;1=0、1&amp;0=0、1&amp;1=1。例如二进制下1100B&amp;1001B=1000B，换成十进制就是12D&amp;9D=8D。<br>&amp;的应用有：<br>（1）、将某些位清零：<br>任何数同0相与的结果都是0，任何数同1相与都是该数自身，据此可以利用&amp;来将某些位清零，例如：<br>01101101B&amp;00001111B=00001101B // 将高四位清零，保留低四位不变<br>（2）、检测某一位的值：<br>原理同上，例如要检查某数的D4位是0还是1，可以将其与00010000B相与（待检测位是1，其它位是0），得到结果若是0，则原数D4位是0；结果若非零，则原数D4位是1。</p>
+<p>2、| 按位或：<br>| 是二元操作符，参加运算的两个数据按二进制数位进行“或”（OR）运算。原则是全0才0，有1则1，即0|0=0、0|1=1、1|0=1、1|1=1。例如二进制下1100B|1001B=1101B，换成十进制就是12D|9D=13D。<br>| 的应用有：<br>将某些位置1：<br>任何数同0相或的结果都是该数自身，任何数同1相或都是1，据此可以利用|来将某些位置1，例如：<br>01101101B|00001111B=01101111B  // 将低四位置1，保留高四位不变</p>
+<p>3、^ 按位异或：<br>^是二元操作符，参加运算的两个数据按二进制数位进行“异或”（XOR）运算。原则是两个位相同时为0，两个位不同时为1，即0^0=0、0^1=1、1^0=1、1^1=0。例如二进制下1100B^1001B=0101B，换成十进制就是12D^9D=5D。<br>^的应用有：<br>（1）、将某些位翻转：<br>任何数同0异或的结果就是该数自身，任何数同1异或就是该数的反，据此可以利用^来将某些位翻转，例如：<br>01101101B^00001111B=01100010B  // 保留高四位不变，将低四位翻转<br>（2）、交换两个变量的值：<br>这应该是位操作最神奇的一个应用了，大家都知道在C语言中要交换两个变量的值一般都要用到第三个变量来临时寄存数值，然而异或操作却可以让大家在不声明第三变量的情况下完成数值交换。例如：  </p>
+<pre><code>voidswap(int <span class="keyword">*</span>pa, int <span class="keyword">*</span>pb)
+{
+  <span class="keyword">*</span>pa=<span class="keyword">*</span>pa^<span class="keyword">*</span>pb;
+ <span class="keyword">*</span>pb=<span class="keyword">*</span>pa^<span class="keyword">*</span>pb;
+   <span class="keyword">*</span>pa=<span class="keyword">*</span>pa^<span class="keyword">*</span>pb;
+}
+</code></pre><p>用逻辑代数可以证明这种交换算法的正确性：易证异或运算满足交换律和结合律，则(a^b)^b=a^(b^b)=a^0=a，(a^b)^a=a^(a^b)=(a^a)^b=0^b=b。</p>
+<p>4、~ 取反：<br>~是一元操作符，具有右结合性，其作用就是将操作数的每一位翻转，例如二进制下~1100B=0011B，换成十进制就是~12D=3D。</p>
+<p>5、&lt;&lt; 左移：<br><code>&lt;&lt;</code>是二元操作符，其功能是把“&lt;&lt;”左边的运算数的各二进位全部左移若干位，由“&lt;&lt;”右边的数指定移动的位数，高位丢弃，低位补0。例如1100B&lt;&lt;1=1000B。左移一位相当于原数乘2。事实上，通过编译器生成的汇编指令可以看出CPU实际上就是用移位和迭代的方式完成了乘除运算。</p>
+<p>6、&gt;&gt; 右移：<br><code>&gt;&gt;</code>是二元操作符，其功能是把“&gt;&gt;”左边的运算数的各二进位全部右移若干位，“&gt;&gt;”右边的数指定移动的位数，低位丢弃，高位补位情况与具体的编译器有关。例如1101B&gt;&gt;1可能等于0110B，也可能等于1110B。原则上，右移一位相当于原数除以2。</p>
+<p><br><br>转载自<a href="http://zhan.renren.com/programming4idiots?gid=3602888498024183474&amp;from=post&amp;checked=true" target="_blank" rel="external">孙晓博 人人小站</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>估计大多数人第一次接触C语言位操作时都不屑一顾，很多人都会说“C是高级语言，还用得着在这么低级的数位层级上进行操作吗？这东西应该属于汇编才对！”值得一提地是，除了嵌入式系统开发外，即便是在PC机编程方面位操作符也有其用武之地，有很多非常巧妙的问题都可以通过位操作来方便地实现。此外，我们还可以注意到现在通用的高级语言一般都保留了位操作符，像Java这样的语言还在C的基础上有所加强（增加了&gt;&gt;&gt;操作符，克服了右移时高位不确定的不足）。<br>]]>
+    
+    </summary>
+    
+      <category term="C" scheme="http://dcfun.github.com/tags/C/"/>
+    
+      <category term="basis" scheme="http://dcfun.github.com/categories/basis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[聊聊环境变量]]></title>
+    <link href="http://dcfun.github.com/2015/10/24/shownTalk-About-Environment-Variable/"/>
+    <id>http://dcfun.github.com/2015/10/24/shownTalk-About-Environment-Variable/</id>
+    <published>2015-10-24T04:27:53.000Z</published>
+    <updated>2015-10-24T04:38:10.775Z</updated>
+    <content type="html"><![CDATA[<p>对于一个初学者来说，最重要的莫过于环境变量了。很多的老师第一步总是会教你怎么用记事本来写java，然后怎么编译，然后怎么运行。这些都依赖于环境变量。<br>那么我们首先来讲讲环境变量是什么东西。<br><a id="more"></a><br>首先打开你的命令行，如果是win 7，直接在开始菜单输入cmd，就可以打开了<br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoSo1Snh2OHIhwZnkCzk7PVj5Q2pic0IGhzAmnEz1ibeBXrsTcPuLn9nMw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="1"></p>
+<p>这就是命令行</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFonKIZ6K2fFvhicJ6Ba3UOYrVMTJMcaNeNQuhRbHoUl2ic36L8mqZgt7XQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="2"></p>
+<p>先切换到我的工作目录f:/test（切换目录请自行百度，这里不是本贴的重点）<br>然后输入test，会提示‘test’ 不是内部或外部命令，也不是可运行程序或批处理文件</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoibYBgnykEXicmqcTBb5ibicz2EO7UuzEnIFATEiccj7sYNYzAStex9EkE3A/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>这是因为命令行自带一部分内部命令，并且提供外部命令执行某些操作，同时命令行也会在当前目录搜索可运行的程序或者批处理文件来执行，而我执行的test都不满足以前情况，所以报错，但如果我执行ping <a href="http://www.baidu.com，则可以正确运行，因为ping是一个外部命令。" target="_blank" rel="external">http://www.baidu.com，则可以正确运行，因为ping是一个外部命令。</a></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFo1tdQkaJdosDKDDSnEjFc1kLFTaJcBHUibOY60XqkAKRzeZfIqtP3l7Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>那么这些命令为什么能运行呢？<br>我把环境变量下的%SystemRoot%\system32;这一段删除，重新打开命令行(必须新启一个，改变的环境变量不会影响已经打开的命令行窗口)<br>再次执行ping <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> 也出现了‘ping’ 不是内部或外部命令，也不是可运行程序或批处理文件<br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFon8onM7I51gJlTN3qWqgyKBnPb7M7YPrggibWMVq5f88DAw8mrBwSN0w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>而我执行c:\Windows\System32\PING.exe <a href="http://www.baidu.com则成功" target="_blank" rel="external">http://www.baidu.com则成功</a><br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoCwcgux2ibXtFWibVxeBn0yARW3k2ROs0XocBgAXbkL4xOso0Igj2Ts8w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>说明ping 命令是执行的c:\Windows\System32\文件夹下的ping.exe这个程序，所以我们可以确定环境变量是用来告诉命令行，我的每一个命令是在哪里来找。</p>
+<p>比如我在我的工作目录下创建一个test.bat里面只有一行代码 echo %1<br>然后再执行刚刚的test命令<br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoVnO9xqgJZty5LDgcAlqE9h3E2OXiaHWZubSDaaGbYjPHg6nBGYZIGgw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>现在就正常了，因为test现在是一个批处理文件了</p>
+<p>所以当我们敲java -version提示‘java’ 不是内部或外部命令，也不是可运行程序或批处理文件<br>时，我们就知道了，是path里面没有配置java.exe的路径。于是我们可以直接把java.exe的路径配置到path里面，再次执行java -version ，就正常了<br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFonAwqt4FC2rSGMKLXqvqiaVxvN3VX3xyrWg316PWDEFL53CobYEuicO3w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>那么为什么要配置CLASS_HOME和JAVA_HOME呢？<br>其实CLASS_HOME和JAVA_HOME就相当于两个变量，当你需要某个值时，通过JAVA_HOME就可以直接找到，你当然可以叫其他名字，但不建议，因为某些软件可能通过这两个名字来取得这两个变量的值。<br>那么JAVA_HOME是干什么的？<br>JAVA_HOME就是定义了java的安装路径，比如我的路径为C:\Program Files\Java\jdk1.8.0_51，那么我的JAVA_HOME的值就为C:\Program Files\Java\jdk1.8.0_51<br><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFowpQlaqyNQaBpPft3a71eyMaCl6CDyyPKBd6r6asV7YuZ1pBu5vtPkw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoRIsfCatuMuZUlMIjyvN0j7uibwNZbwoWuvrnAib34UUUGndYcuYSzP6w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p>然后在Path里面配置java.exe的路径时，直接配置%JAVA_HOME%\bin。%JAVA_HOME%就是取jdk安装路径，然后得到完整的路径就是C:\Program Files\Java\jdk1.8.0_51\bin<br>通常我们需要配置两个路径%JAVA_HOME%\bin和%JAVA_HOME%\jre\bin，因为这俩个目录下有java给我们提供的工具。</p>
+<p>使用JAVA_HOME有什么好处呢？</p>
+<p>很多情况下你需要不同版本的java，比如工作需要jdk 6或者jdk7，但你喜欢挑战新事务，想了解jdk 8的新功能，那么你可以将原来的JAVA_HOME重命名为JAVA_HOME1，然后再建一个JAVA_HOME，设置为另一个版本的jdk路径，然后需要切换时，把使用的JAVA_HOME换成其他不影响使用的名字，把你需要的版本设置为JAVA_HOME，这样可以轻松切换jdk版本，当然，你也可以写一个程序，自己设置JAVA_HOME的路径，这样更轻松的切换jdk版本</p>
+<p>那么CLASS_PATH又是干嘛的呢？</p>
+<p>CLASS_PATH，顾名思意，就是class 的路径，class是我们编译后的文件，所以CLASS_PATH就是告诉java当我们需要找哪个类时，需要到哪里去找这个类。默认配置<br>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar<br>这两个类是java给我们提供的基础类库，如果你想使用其他类库，都可以配置在CLASS_PATH里，那么在程序运行时，就不需要再手动配置了<br>注意：1、eclipse等IDE写程序时，默认不是通过CLASS_PATH来获取类库的，所以依然需要你自己配置，但服务器上多个程序运行都依然的库，可以配置在CLASS_PATH中，避免每次加包或者减包没有把所有应用都同步操作而出错。<br>2、CLASS_PATH必须配置.; 点和分号，告诉java当前目录也要搜索</p>
+<p>现在再让你配置环境变量，你是不是感觉得心应手了呢？</p>
+<p>当然，每个人接受能力不同，处理问题也可能不细心，那么可能出现下面这种情况</p>
+<p>输入java -version 正常就以为环境变量配置成功了但输入javac时，就提示‘javac<br>’不是内部或外部命令，也不是可运行程序或批处理文件，</p>
+<p>这又是为什么呢？通过查看，我发现%JAVA_HOME%\jre\bin目录下有java.exe，但是没有javac.exe，所以导致java命令有用，而javac命令无效，所以只需要配置%JAVA_HOME%\bin就可以解决问题，</p>
+<p>当然也存在另外一种可能，就是%JAVA_HOME%\bin下没有javac.exe，这种情况可能是因为你的jdk安装出问题了，或者其他情况，重新安装应该是可以解决问题</p>
+<p>当然jdk的下载最好是通过官网，最好不要在第3方网站下载，最近的XCodeGhost事件影响很大，如果觉得官网下载太慢，从第三方下载后，最好通过官网提供的文件校验码对比来确认文件的真实性和完整性，通常为 MD5、SHA1等</p>
+<p>全文转载自 <a href="http://tieba.baidu.com/p/4070201193#rd" target="_blank" rel="external">j8大神okou19900722</a><div align="center"><img src="http://mmbiz.qpic.cn/mmbiz/dnlya04DILR9tiadfUWzLOeUSr1jd3jFoBDmuY8Mv5PiaCQoRFF3QnpnnyvHS7WxzfkaszFl73X2apiabnbrreeew/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" width="80px" height="80px" alt=""></div></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>对于一个初学者来说，最重要的莫过于环境变量了。很多的老师第一步总是会教你怎么用记事本来写java，然后怎么编译，然后怎么运行。这些都依赖于环境变量。<br>那么我们首先来讲讲环境变量是什么东西。<br>]]>
+    
+    </summary>
+    
+      <category term="随便聊聊" scheme="http://dcfun.github.com/tags/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A/"/>
+    
+      <category term="shownTalk" scheme="http://dcfun.github.com/categories/shownTalk/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[IntelliJ IDEA 14.1使用笔记]]></title>
@@ -241,7 +338,7 @@
     <link href="http://dcfun.github.com/2015/10/18/utils-Markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://dcfun.github.com/2015/10/18/utils-Markdown使用笔记/</id>
     <published>2015-10-18T06:31:08.000Z</published>
-    <updated>2015-10-22T05:19:51.911Z</updated>
+    <updated>2015-10-24T05:02:18.401Z</updated>
     <content type="html"><![CDATA[<p>#添加图片，使其居中<br>直接上html标签 </p>
 <pre><code>&lt;<span class="tag">div</span> align=center&gt;
     &lt;<span class="tag">img</span> src=<span class="string">"图片url"</span> <span class="attribute">width</span>=<span class="string">"宽度px"</span> <span class="attribute">height</span>=<span class="string">"高度px"</span> alt=<span class="string">""</span>/&gt;
@@ -251,8 +348,9 @@
 <div align=center><img src="http://chunchao.org/pic/15102.png" width="px" height="px" alt=""/></div>
 
 -->
-<p>#给博文添加个 read more功能<br>在你想停的地方 加个/&lt;!–more–/&gt;<br>(/为转义字符，请自动忽略)  </p>
-<p>#在markdown里插入代码 真心蛋疼<br>短一点的代码 我准备直接截图，然后直接插入图片了<br>长一点的 直接传到github上，分享地址<img src="/pic/wx.png" alt="wx"></p>
+<p>#给博文添加个 read more功能<br>在你想停的地方 加个<code>&lt;!--more--&gt;</code>  </p>
+<p>#转义字符：空格  </p>
+<p><code>&amp;ensp;</code> ：一个空格<br><code>&amp;emsp;</code> ：两个空格</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>#添加图片，使其居中<br>直接上html标签 </p>

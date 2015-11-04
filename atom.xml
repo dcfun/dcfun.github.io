@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dcfun.github.io/"/>
-  <updated>2015-10-24T04:57:55.133Z</updated>
+  <updated>2015-11-01T07:10:59.245Z</updated>
   <id>http://dcfun.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[java学习笔记]]></title>
+    <link href="http://dcfun.github.io/2015/10/30/basis-java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://dcfun.github.io/2015/10/30/basis-java学习笔记/</id>
+    <published>2015-10-30T06:04:47.000Z</published>
+    <updated>2015-11-01T07:10:59.245Z</updated>
+    <content type="html"><![CDATA[<p>protected：只能被继承，不能被访问<br>private： 不能被继承 也不能被访问</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>protected：只能被继承，不能被访问<br>private： 不能被继承 也不能被访问</p>
+]]>
+    </summary>
+    
+      <category term="java" scheme="http://dcfun.github.io/tags/java/"/>
+    
+      <category term="basis" scheme="http://dcfun.github.io/categories/basis/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[关于浮点数与IEEE754]]></title>
@@ -288,16 +307,16 @@
     <link href="http://dcfun.github.io/2015/10/19/%E7%9E%8E%E6%8E%A8%E8%8D%90-%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8/"/>
     <id>http://dcfun.github.io/2015/10/19/瞎推荐-整理一下我的播放列表/</id>
     <published>2015-10-19T05:15:59.000Z</published>
-    <updated>2015-10-21T13:08:16.665Z</updated>
+    <updated>2015-11-02T13:37:14.198Z</updated>
     <content type="html"><![CDATA[<p>#视频  </p>
 <p>##<a href="http://i.youku.com/u/UNTY1NjE4NDg4" target="_blank" rel="external">爱极客</a><br>《极客报》、《科技不正经》。。。各种数码测评 一集不落<br><a id="more"></a></p>
-<p>##<a href="http://space.bilibili.com/11368926#!/video/0//1" target="_blank" rel="external">有机情</a><br>有激情 - 《每日三分钟》午餐和<a href="http://weibo.com/weiaijiaz" target="_blank" rel="external">@杰女王</a>的声音更配哦~</p>
+<p>##<a href="http://digi.tech.qq.com/digivideo/fundiginews/yjq.htm" target="_blank" rel="external">有机情</a><br>有激情 - 《每日三分钟》午餐和<a href="http://weibo.com/weiaijiaz" target="_blank" rel="external">@杰女王</a>的声音更配哦~</p>
 <p>##<a href="http://v.qq.com/vplus/dabaitech/videos" target="_blank" rel="external">真像大白</a><br>告别小白，真相大白，我们来聊聊科技圈！</p>
 <p>##<a href="http://i.youku.com/lvxing" target="_blank" rel="external">侣行</a><br>从第一季一直追到现在，就像<a href="http://www.xiami.com/song/1774438611" target="_blank" rel="external">主题曲</a>里面唱的“敢在天地留足迹，且为将来留回忆。” i like.  </p>
 <p>#播客  </p>
 <p>##<a href="http://www.ximalaya.com/#/20445422/album/335347" target="_blank" rel="external">卓老板聊科技</a><br><a href="http://weibo.com/xiongtadie" target="_blank" rel="external">@卓老板聊科技</a>  聊的不仅仅是科技<img src="/pic/huaix.png" alt="huaix">  </p>
 <p>##<a href="http://www.ximalaya.com/#/1072807/album/308981" target="_blank" rel="external">岩讲录</a><br>面对<a href="http://weibo.com/rexregulus" target="_blank" rel="external">@轩辕十四Rex</a> 岩哥那渊博的知识， 小弟我剩下的只有佩服</p>
-<p>#<a href="http://www.ximalaya.com/#/1000241/album/321796" target="_blank" rel="external">老梁故事会</a><br><img src="/pic/wx.png" alt="wx">曾经每天不听上一集，我都睡不着觉</p>
+<p>#<a href="http://www.ximalaya.com/#/1000241/album/321796" target="_blank" rel="external">老梁故事会</a><br><img src="/pic/wx.png" alt="wx"><a href="http://www.ylws.net/a/llgsh/" target="_blank" rel="external">曾经每天不听上一集，我都睡不着觉</a></p>
 <iframe height="230" width="260" src="http://www.ximalaya.com/swf/album/red.swf?id=335347" frameborder="0"></iframe><br><iframe height="230" width="260" src="http://www.ximalaya.com/swf/album/red.swf?id=308981" frameborder="0"></iframe><br><iframe height="230" width="260" src="http://www.ximalaya.com/swf/album/red.swf?id=321796" frameborder="0"></iframe>
 ]]></content>
     <summary type="html">
